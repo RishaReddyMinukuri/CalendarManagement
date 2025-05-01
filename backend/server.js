@@ -10,7 +10,6 @@ const DATA_FILE = path.join(__dirname, 'tasks.json');
 app.use(cors());
 app.use(express.json());
 
-// Ensure tasks.json exists
 if (!fs.existsSync(DATA_FILE)) {
   fs.writeFileSync(DATA_FILE, '[]');
 }
